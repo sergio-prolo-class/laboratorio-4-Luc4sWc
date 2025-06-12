@@ -1,11 +1,13 @@
 package domain;
 
+import domain.Pessoa;
+
 import java.time.LocalDate;
 
-public class Cliente extends Pessoa{
+public class Cliente extends Pessoa {
     private static int countTotal;
 
-    static{
+    static {
         countTotal = 0;
     }
 
@@ -15,14 +17,15 @@ public class Cliente extends Pessoa{
     private char genero;
     private LocalDate dataCadastro;
 
-    public Cliente (String nome,String cpf, String sobrenome, String endereco, String telefone, char genero, String... email){
-        super(nome,sobrenome,cpf,email);
-
-        this.dataCadastro = LocalDate.now();
+    public Cliente(String nome, String cpf,
+                   String sobreNome, String endereco,
+                   String telefone, char genero, String... emails) {
+        super(nome, cpf, sobreNome, emails);
         this.endereco = endereco;
         this.telefone = telefone;
         this.genero = genero;
+        this.dataCadastro = LocalDate.now();
         this.id = ++countTotal;
-
     }
+
 }

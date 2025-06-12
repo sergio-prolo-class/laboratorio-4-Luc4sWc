@@ -6,30 +6,26 @@ import java.util.Set;
 
 public class Pessoa {
     private String nome;
-    private String sobrenome;
+    private String sobreNome;
     private String cpf;
-    private Set<String> email;
+    private Set<String> emails;
 
-    public Pessoa (String nome, String sobrenome, String cpf, String... email){
+    public Pessoa(String nome, String cpf,
+                  String sobreNome, String... emails) {
         this.nome = nome;
+        this.sobreNome = sobreNome;
         this.cpf = cpf;
-        this.sobrenome = sobrenome;
-        this.email = new HashSet<>(Arrays.asList(email));
+        this.emails = new HashSet<>(Arrays.asList(emails));
     }
 
-    public String getNome() {
-        return nome;
+    @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Pessoa p)) return false;
+        return cpf.equals(p.cpf);
     }
 
-    public Set<String> getEmail() {
-        return email;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public String getSobrenome() {
-        return sobrenome;
+    @Override
+    public int hashCode() {
+        return cpf.hashCode();
     }
 }

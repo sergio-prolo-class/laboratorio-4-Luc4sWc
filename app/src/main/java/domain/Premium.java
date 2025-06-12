@@ -1,18 +1,25 @@
 package domain;
 
+import domain.Senior;
+
 import java.time.LocalDate;
 
-public class Premium extends Cliente{
-    private double pagMensal;
+public class Premium extends Cliente {
+    private double pgmtMensal;
     private LocalDate dataInicioPremium;
-    //funcionario representante
-    private Senior representante;
+    private Senior representate;
 
-    public Premium (String nome,String cpf, String sobrenome, String endereco, String telefone, char genero, String email, double pagMensal){
-        super(nome, cpf, sobrenome, endereco, telefone,genero,email);
-        this.pagMensal = pagMensal;
+    public Premium(String nome, String cpf,
+                   String sobreNome, String endereco,
+                   String telefone, char genero,
+                   double  pgmtMensal, String... emails) {
+        super(nome, cpf, sobreNome, endereco, telefone, genero, emails);
+        this.pgmtMensal = pgmtMensal;
         this.dataInicioPremium = LocalDate.now();
-        this.representante = null;
+        representate = null;
+    }
 
+    public void setRepresentate(Senior representate) {
+        this.representate = representate;
     }
 }
