@@ -1,4 +1,4 @@
-package domain;
+package domain.funcionario;
 
 import java.time.LocalDate;
 import java.util.List;

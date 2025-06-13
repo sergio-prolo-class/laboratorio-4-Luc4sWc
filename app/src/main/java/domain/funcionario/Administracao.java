@@ -1,4 +1,4 @@
-package domain;
+package domain.funcionario;
 
 public class Administracao extends Estagio {
     private String setor;
@@ -9,5 +9,13 @@ public class Administracao extends Estagio {
 
         this.setor = setor;
         this.descricao = descricao;
+    }
+
+    public String getSetor() {
+        return setor;
+    }
+
+    public String getDescricao() {
+        return descricao;
     }
 }

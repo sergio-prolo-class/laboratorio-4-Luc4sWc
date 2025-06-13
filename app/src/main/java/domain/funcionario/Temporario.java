@@ -1,4 +1,4 @@
-package domain;
+package domain.funcionario;
 
 import java.time.LocalDate;
 
@@ -12,5 +12,13 @@ public class Temporario extends Funcionario {
       this.dataTerminoTemporario = dataTerminoTemporario;
       this.valorTotal = valorTotal;
 
+   }
+
+   public LocalDate getDataTerminoTemporario() {
+      return dataTerminoTemporario;
+   }
+
+   public double getValorTotal() {
+      return valorTotal;
    }
 }

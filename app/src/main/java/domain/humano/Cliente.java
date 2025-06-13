@@ -1,6 +1,4 @@
-package domain;
-
-import domain.Pessoa;
+package domain.humano;
 
 import java.time.LocalDate;
 
@@ -28,4 +26,23 @@ public class Cliente extends Pessoa {
         this.id = ++countTotal;
     }
 
+    public String getEndereco() {
+        return endereco;
+    }
+
+    public char getGenero() {
+        return genero;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public LocalDate getDataCadastro() {
+        return dataCadastro;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
 }

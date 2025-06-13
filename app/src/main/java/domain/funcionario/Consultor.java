@@ -1,4 +1,6 @@
-package domain;
+package domain.funcionario;
+
+import domain.clt.Pleno;
 
 import java.time.LocalDate;
 

@@ -1,6 +1,7 @@
-package domain;
+package domain.clt;
 
-import javax.print.attribute.standard.JobHoldUntil;
+import domain.funcionario.Consultor;
+
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
@@ -15,7 +16,7 @@ public class Pleno extends CLT {
                  String sobreNome, double salario,
                  int cargaHoraria, String carteiraTrabalho,
                  Set<String> habilidades, String... emails) {
-        super(nome, cpf, sobreNome, salario, cargaHoraria, carteiraTrabalho, habilidades,emails);
+        super(nome, cpf, sobreNome, salario, cargaHoraria, carteiraTrabalho, habilidades,new HashSet<>(),emails);
         orientados = new HashSet<>();
         chefe = null;
         consultores = new HashSet<>();

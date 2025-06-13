@@ -1,4 +1,4 @@
-package domain;
+package domain.funcionario;
 
 public class TI extends Estagio {
     private Integer nSerie;
@@ -9,5 +9,17 @@ public class TI extends Estagio {
 
         this.nSerie = nSerie;
         this.atuacao = atuacao;
+    }
+
+    public String getAtuacao() {
+        return atuacao;
+    }
+
+    public void setAtuacao(String atuacao) {
+        this.atuacao = atuacao;
+    }
+
+    public Integer getnSerie() {
+        return nSerie;
     }
 }

@@ -1,4 +1,4 @@
-package domain;
+package domain.humano;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -27,5 +27,21 @@ public class Pessoa {
     @Override
     public int hashCode() {
         return cpf.hashCode();
+    }
+
+    public Set<String> getEmails() {
+        return emails;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getSobreNome() {
+        return sobreNome;
     }
 }

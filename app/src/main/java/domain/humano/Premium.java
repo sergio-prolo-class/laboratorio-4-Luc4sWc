@@ -1,6 +1,6 @@
-package domain;
+package domain.humano;
 
-import domain.Senior;
+import domain.clt.Senior;
 
 import java.time.LocalDate;
 
@@ -21,5 +21,17 @@ public class Premium extends Cliente {
 
     public void setRepresentate(Senior representate) {
         this.representate = representate;
+    }
+
+    public double getPgmtMensal() {
+        return pgmtMensal;
+    }
+
+    public LocalDate getDataInicioPremium() {
+        return dataInicioPremium;
+    }
+
+    public Senior getRepresentate() {
+        return representate;
     }
 }

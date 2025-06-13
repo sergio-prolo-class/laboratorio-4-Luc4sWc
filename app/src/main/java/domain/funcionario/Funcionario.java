@@ -1,6 +1,6 @@
-package domain;
+package domain.funcionario;
 
-import java.time.LocalDate;
+import domain.humano.Pessoa;
 
 import java.time.LocalDate;
 
@@ -28,6 +28,14 @@ public class Funcionario extends Pessoa {
     }
 
     public int hashCode() {
+        return id;
+    }
+
+    public LocalDate getDataInicioContrato() {
+        return dataInicioContrato;
+    }
+
+    public int getId() {
         return id;
     }
 }
